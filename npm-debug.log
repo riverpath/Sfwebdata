@@ -1,0 +1,31 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'D:\\MathSoft\\Nodejs\\node.exe',
+1 verbose cli   'C:\\Users\\Administrator\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'run',
+1 verbose cli   'devstart' ]
+2 info using npm@3.10.10
+3 info using node@v10.3.0
+4 verbose run-script [ 'predevstart', 'devstart', 'postdevstart' ]
+5 info lifecycle sfwebdata@0.0.0~predevstart: sfwebdata@0.0.0
+6 silly lifecycle sfwebdata@0.0.0~predevstart: no script for predevstart, continuing
+7 info lifecycle sfwebdata@0.0.0~devstart: sfwebdata@0.0.0
+8 verbose lifecycle sfwebdata@0.0.0~devstart: unsafe-perm in lifecycle true
+9 verbose lifecycle sfwebdata@0.0.0~devstart: PATH: C:\Users\Administrator\AppData\Roaming\npm\node_modules\npm\bin\node-gyp-bin;C:\Users\Administrator\Desktop\WorkSpace\Sfwebdata\node_modules\.bin;D:\InternetSoft\wkhtmltopdf\bin;D:\mongodb\bin;D:\InternetSoft\casperjs\bin;D:\MathSoft\JavaContain\JDK\jdk1.8.0_66\bin;D:\MathSoft\JavaContain\JDK\jdk1.8.0_66\jre\bin;D:\MathSoft\phantomjs-2.0.0-windows\bin\;D:\websoft\xampp\mysql\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;D:\OptimizationSoftware\Windows7Master;C:\Program Files (x86)\QuickTime\QTSystem\;D:\MathSoft\Anaconda;D:\MathSoft\Anaconda\Scripts;D:\MathSoft\Anaconda\Library\bin;D:\MathSoft\Nodejs\;D:\InternetSoft\Markdown;D:\ToolSoft\xpdfbin-win-3.04\bin64;D:\MathSoft\Emacs\bin;C:\Program Files (x86)\Pandoc;D:\MathSoft\MySql56\bin;C:\Users\Administrator\AppData\Local\Programs\Fiddler;D:\ToolSoft\jTessBoxEditorFX\tesseract-ocr;C:\Users\Administrator\AppData\Roaming\npm;D:\ToolSoft\SSH Secure Shell
+10 verbose lifecycle sfwebdata@0.0.0~devstart: CWD: C:\Users\Administrator\Desktop\WorkSpace\Sfwebdata
+11 silly lifecycle sfwebdata@0.0.0~devstart: Args: [ '/d /s /c', 'nodemon ./bin/www' ]
+12 verbose stack Error: kill ENOSYS
+12 verbose stack     at process.kill (internal/process.js:186:13)
+12 verbose stack     at process.listener (C:\Users\Administrator\AppData\Roaming\npm\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:86:15)
+12 verbose stack     at process.emit (events.js:187:15)
+13 verbose cwd C:\Users\Administrator\Desktop\WorkSpace\Sfwebdata
+14 error Windows_NT 6.1.7601
+15 error argv "D:\\MathSoft\\Nodejs\\node.exe" "C:\\Users\\Administrator\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "run" "devstart"
+16 error node v10.3.0
+17 error npm  v3.10.10
+18 error code ENOSYS
+19 error errno ENOSYS
+20 error syscall kill
+21 error kill ENOSYS
+22 error If you need help, you may report this error at:
+22 error     <https://github.com/npm/npm/issues>
+23 verbose exit [ 1, true ]

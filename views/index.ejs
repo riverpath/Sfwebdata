@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+    <meta charset="UTF-8"/>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script>
+    function loadXMLDoc()
+    {
+    var xmlhttp;
+    if (window.XMLHttpRequest)
+      {// code for IE7+, Firefox, Chrome, Opera, Safari
+      xmlhttp=new XMLHttpRequest();
+      }
+    else
+      {// code for IE6, IE5
+      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+      }
+    xmlhttp.onreadystatechange=function()
+      {
+      if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+        document.getElementById("resTab").innerHTML=eval('(' + /\[.*?\]/g.exec(xmlhttp.responseText)[0] + ')').toTable();
+        }
+      }
+    xmlhttp.open("post","./json" ,true);
+    xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    xmlhttp.send("cardName=" + document.getElementById("cardName").value);
+    // xmlhttp.send('cardName=' +  document.getElementById("cardName").value);
+
+    //表格函数
+    Array.prototype.toTable = function() {
+            var ar = [];
+            var tab = '';
+            var th = "";
+            for (i in this[0]) {
+                ar.push(i)
+            }
+            ;
+            th = "<tr><th>" + ar.join('</th><th>') + "</th></tr>";
+            this.forEach(function(a) {
+                var b = [];
+                for (i in a) {
+                    b.push(a[i])
+                }
+                tab += "<tr><td>" + b.join('</td><td>') + "</td></tr>"
+            });
+            return("<table class='table table-hover table-bordered'><caption>最近10条数据</caption><thead>" + th + "</thead><tbody>" + tab + "</table><table>")
+        }
+    }
+    </script>
+</head>
+<body>
+    <div class="container-fluid" id="LG">
+        <div class="row-fluid">
+            <div class="span6">
+                <h3>
+                    <strong>公交车查询系统</strong>
+                </h3><hr />
+                <div class="input-group">
+                     <span class="input-group-addon">信息查询</span><input type="text" class="form-control" id="cardName" />
+                </div> 
+                <br/>
+
+                <div class="span6">
+                <button class="btn btn-block btn-info" type="button" onclick="loadXMLDoc()">按钮</button>
+                </div>
+                <br/>
+                <blockquote>
+                        <p>
+                            用于查询
+                        </p> <small>来源 <cite>盛锋咨询</cite></small>
+                    </blockquote>
+                <div class="span12" id="resTab"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
